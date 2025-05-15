@@ -9,12 +9,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-const apiKey = process.env.EXCHANGE_API_KEY;
-
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 let data = {};
+let currencyCodes = [];
 let countryNames = [];
 
 try {
