@@ -1,0 +1,21 @@
+{
+  "name": "currency-guru",
+  "version": "1.0.0",
+  "description": "Hello Everyone, I have built a simple web application using Node.js and Express.js. This application is a simple currency converter that allows users to convert between different currencies. The application uses the ExchangeRate API to fetch the latest exchange rates and perform the currency conversion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vishesh Jain",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security"
+  }
+}
