@@ -9,7 +9,7 @@
             <div class="row g-5">
                 <div class="col d-flex flex-column align-items-center text-center">
                     <div class="d-flex flex-column align-items-center">
-                        <label for="base_currency" class="mb-2">Select Currency</label>
+                        <label for="base_currency" class="mb-2">Select Your Currency</label>
                         <select name="base_code" id="base_code" class="currency_option">
                             <% for (var i = 0; i < code.length; i++) { %>
                                 <option value="<%= (code[i]).toUpperCase() %>"><%= (code[i]).toUpperCase() %> <%= country[i] ? country[i] : '' %></option>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="col d-flex flex-column align-items-center text-center">
                     <div class="d-flex flex-column align-items-center">
-                        <label for="target_currency" class="mb-2">Select Currency</label>
+                        <label for="target_currency" class="mb-2">Select to get Currency</label>
                         <select name="target_code" id="target_code" class="currency_option">
                             <% for (var i = 0; i < code.length; i++) { %>
                                 <option value="<%= (code[i]).toUpperCase() %>"><%= (code[i]).toUpperCase() %> <%= country[i] ? country[i] : '' %></option>
@@ -33,9 +33,10 @@
             </div>
     </form>
 </div>
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100">
         <% if (locals.rate) {%>
-        <h4> <%=base_amount + " " + base %> = <%= base_amount*rate %> <%= target %></h4>
+                <p>1 <%=base %> = <%=rate %> <%= target %></p>
+                <h4> <%=base_amount + " " + base %> = <%= base_amount*rate %> <%= target %></h4>
         <% } else {%>
         <% } %>
     </div>
